@@ -1,0 +1,111 @@
+{
+  "theme": "dark",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) + Terminal Retro-Futurism",
+  "domain": "Cybersecurity SaaS Application",
+  "mood": "Secure, command-center, technical, elite, fast",
+  "colors": {
+    "background": "#09090b",
+    "foreground": "#ffffff",
+    "primary": "#10b981",
+    "primary_hover": "#059669",
+    "primary_foreground": "#000000",
+    "card": "#0f0f12",
+    "border": "#27272a",
+    "muted": "#18181b",
+    "muted_foreground": "#a1a1aa",
+    "ring": "#10b981",
+    "destructive": "#ef4444",
+    "success": "#10b981",
+    "terminal_glow": "rgba(16, 185, 129, 0.15)"
+  },
+  "typography": {
+    "fonts": {
+      "headings": "Chivo, sans-serif",
+      "body": "IBM Plex Sans, sans-serif",
+      "monospace": "IBM Plex Mono, monospace"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight",
+      "h3": "text-xl sm:text-2xl font-semibold tracking-tight",
+      "h4": "text-lg font-medium",
+      "body": "text-base leading-relaxed text-zinc-300",
+      "small": "text-sm text-zinc-400",
+      "overline": "text-xs font-bold uppercase tracking-[0.2em] text-emerald-500"
+    },
+    "rules": [
+      "No generic sans-serifs for headings. Chivo provides a stark, structural tech feel.",
+      "Passwords, credit balances, and hex codes MUST use IBM Plex Mono.",
+      "Overlines must always be used above major section headers to establish structure."
+    ]
+  },
+  "layout_and_spacing": {
+    "strategy": "The Control Room Grid",
+    "spacing_scale": "p-4, p-6, p-8, p-12, p-24",
+    "rules": [
+      "Use 'Grid Borders' pattern: Expose the structural skeleton of the app. Containers should use border-collapse style with 1px border-zinc-800.",
+      "Containers with borders MUST have generous internal padding (p-6 or p-8).",
+      "Never center-align forms or dense data. Always left-align for maximum scanning efficiency.",
+      "Mobile constraints: Images and data visualizations max 80vh height."
+    ],
+    "dashboard_grid": {
+      "base": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4",
+      "gap": "gap-4 md:gap-6",
+      "item_stretch": "h-full"
+    }
+  },
+  "surfaces_and_materials": {
+    "headers": "Crystal Glass: bg-zinc-950/60 backdrop-blur-xl border-b border-zinc-800",
+    "cards": "Terminal Look: bg-[#0f0f12] border border-zinc-800 rounded-lg. Hover state: border-emerald-500/30 shadow-[0_4px_24px_rgba(16,185,129,0.05)] transition-all duration-300.",
+    "password_display": "Retro-Futurism: bg-black border border-emerald-500/50 shadow-[0_0_15px_rgba(16,185,129,0.1)] text-emerald-500 text-center font-mono py-6 rounded-md.",
+    "buttons": {
+      "primary": "bg-emerald-500 text-black font-bold rounded-md hover:bg-emerald-600 transition-colors",
+      "secondary": "bg-zinc-900 border border-zinc-800 text-white hover:bg-zinc-800 transition-colors hover:text-emerald-400"
+    }
+  },
+  "images_and_media": {
+    "hero_background": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/8da592cd-ad14-4ec5-a28a-b4c7f1516a8e/images/f3f431417299e777cca3394b4071fa337e8b32ddf8ff8277e6ff1576e6860c49.png",
+      "description": "Tech nodes subtle glowing green network topology. Use as main landing page background with bg-black/80 overlay."
+    },
+    "security_visual": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/8da592cd-ad14-4ec5-a28a-b4c7f1516a8e/images/9676396025db18507519ff8a2c813d54232c116eeadb543efbbf8a158bd533bf.png",
+      "description": "3D glowing green padlock digital cubes. Use for the 'Security Features' or 'Hero' visual on the marketing page."
+    },
+    "vault_texture": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/8da592cd-ad14-4ec5-a28a-b4c7f1516a8e/images/0d475a8d8e59c7010c86ccacea0126fa8bab4a9421b85fa941efdcbd97e53bc6.png",
+      "description": "Dark abstract metallic server vault. Use as background for Pricing page or Credit Dashboard."
+    },
+    "abstract_digital": {
+      "url": "https://images.unsplash.com/photo-1761599821310-da0d6356b4f3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGNyeXB0b2dyYXBoeSUyMGRhcmslMjBncmVlbnxlbnwwfHx8fDE3NzQ0NzU5NDh8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract green digital pattern with vertical lines. Use for 'History' or 'Batch Generation' section background with heavy dark overlay."
+    }
+  },
+  "components": {
+    "strategy": "Hybrid",
+    "marketing": "Pure HTML/Tailwind for bento grids and hero layouts to maintain strict structural control.",
+    "app_dashboard": "Shadcn UI heavily customized to match the 'Terminal/Swiss' aesthetic.",
+    "inputs": "Shadcn Input, modified to have bg-black border-zinc-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500.",
+    "tables": "Shadcn Table for Password History and Credit History. Remove rounded corners, use straight lines. Header bg should be zinc-900.",
+    "icons": "lucide-react"
+  },
+  "interactions_and_motion": {
+    "hover_states": "All interactive elements must explicitly declare hover states. Examples: hover:bg-zinc-800 hover:text-emerald-400.",
+    "focus_states": "focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-black outline-none.",
+    "transitions": "Use transition-colors duration-200 for buttons/links. Use transition-all duration-300 ease-out for cards.",
+    "accessibility": "Respect prefers-reduced-motion. Ensure hover text meets 4.5:1 contrast."
+  },
+  "testing_attributes": {
+    "rule": "CRITICAL: All interactive and key informational elements MUST include a data-testid attribute.",
+    "convention": "kebab-case, role-based. Examples: data-testid='generate-password-button', data-testid='credit-balance-display', data-testid='login-submit-button'."
+  },
+  "instructions_to_main_agent": [
+    "1. Replace index.css variables with the dark mode palette defined in these guidelines. Set global background to #09090b.",
+    "2. Ensure Tailwind config is updated with the custom fonts: Chivo, IBM Plex Sans, and IBM Plex Mono.",
+    "3. Build the marketing/pricing page using the 'hero_background' with a heavy overlay (bg-black/70). Use bento grids for features.",
+    "4. For the Password Generation tool, use a high-contrast terminal-like display for the generated password. It must be the focal point.",
+    "5. For the pricing table, use the 'Grid Borders' layout pattern. Highlight the $30/200cr package with a border-emerald-500.",
+    "6. Integrate Shadcn components (Dialog, Input, Button, Table, Tabs) but strip Vercel-like soft styling. Use sharp corners (rounded-md max) and high contrast borders.",
+    "7. Add data-testid to EVERY button, form input, and essential text element (like generated password output or credit amounts)."
+  ]
+}
