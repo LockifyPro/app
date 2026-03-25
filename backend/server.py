@@ -308,7 +308,7 @@ async def update_vault_item(item_id: str, data: VaultItemUpdate, user: dict = De
             "_id": ObjectId(item_id),
             "user_id": user["_id"]
         })
-    except:
+    except Exception:
         raise HTTPException(status_code=404, detail="Item not found")
     
     if not item:
@@ -348,7 +348,7 @@ async def delete_vault_item(item_id: str, user: dict = Depends(require_pro)):
             "_id": ObjectId(item_id),
             "user_id": user["_id"]
         })
-    except:
+    except Exception:
         raise HTTPException(status_code=404, detail="Item not found")
     
     if result.deleted_count == 0:
