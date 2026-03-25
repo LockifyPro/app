@@ -8,14 +8,22 @@ Convert the static PasswordAndLock HTML website (a browser-based secure password
 - Encrypted password vault (client-side AES-256 encryption)
 - Passphrase generation (Pro only)
 - Stripe payment integration
+- **Render.com deployment ready**
 
 ## Architecture
 - **Frontend**: React 18 + Tailwind CSS + shadcn/ui components
 - **Backend**: FastAPI (Python) with async MongoDB
-- **Database**: MongoDB
+- **Database**: MongoDB (MongoDB Atlas for production)
 - **Auth**: JWT tokens (bcrypt password hashing)
 - **Payments**: Stripe Checkout integration
 - **Encryption**: Web Crypto API (AES-256-GCM, PBKDF2)
+- **Hosting**: Render.com (Backend: Web Service, Frontend: Static Site)
+
+## Deployment Files Added
+- `render.yaml` - Render.com Blueprint for one-click deployment
+- `DEPLOY_RENDER.md` - Comprehensive deployment guide
+- `frontend/public/_redirects` - SPA routing fallback
+- `backend/Procfile` - Render process configuration
 
 ## User Personas
 1. **Free User**: Needs quick, secure password generation without account
