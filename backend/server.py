@@ -1,10 +1,21 @@
 from fastapi import FastAPI, APIRouter, HTTPException, status, Depends, Request
 
+
+
 from fastapi import FastAPI
 
 app = FastAPI()
 
 @app.get("/")
+def root():
+    return {"message": "Backend is running"}
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+
 def root():
     return {"status": "API is running"}
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
