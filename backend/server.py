@@ -5,11 +5,6 @@ app = FastAPI
 
 (title="PasswordAndLock API", version="1.0.0")
 
-@app.get("/")
-def root():
-    return {"message": "Backend is running"}
-
-@app.get("/")
 
 def root():
     return {"status": "API is running"}
