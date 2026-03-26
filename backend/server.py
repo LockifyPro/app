@@ -1,18 +1,13 @@
-from fastapi import FastAPI, APIRouter, HTTPException, status, Depends, Request
+from fastapi import FastAPI, APIRouter, HTTPException, Depends, Request
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
+app = FastAPI
 
-
-from fastapi import FastAPI
-
-app = FastAPI()
+(title="PasswordAndLock API", version="1.0.0")
 
 @app.get("/")
 def root():
     return {"message": "Backend is running"}
-
-from fastapi import FastAPI
-
-app = FastAPI()
 
 @app.get("/")
 
