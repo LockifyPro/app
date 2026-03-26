@@ -6,8 +6,6 @@ app = FastAPI(title="PasswordAndLock API", version="1.0.0")
 @app.get("/")
 async def root():
     return {"status": "API is running"}
-def root():
-    return {"status": "API is running"}
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
