@@ -1,11 +1,11 @@
 from fastapi import FastAPI, APIRouter, HTTPException, Depends, Request
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
-app = FastAPI
+app = FastAPI(title="PasswordAndLock API", version="1.0.0")
 
-(title="PasswordAndLock API", version="1.0.0")
-
-
+@app.get("/")
+async def root():
+    return {"status": "API is running"}
 def root():
     return {"status": "API is running"}
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
